@@ -1,6 +1,6 @@
 package com.devopsbuddy.backend.persistence.domain.backend;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import com.devopsbuddy.enums.PlansEnum;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,7 +8,6 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@EntityScan(basePackages = "com.devopsbuddy.backend.persitance.domain.backend")
 public class Plan implements Serializable {
 
     /** The Serial Version UID for Serializable classes. */
@@ -23,6 +22,15 @@ public class Plan implements Serializable {
     /** Default constructor. */
     public Plan() {
 
+    }
+
+    /**
+     * Full constructor
+     * @param plansEnum
+     */
+    public Plan(PlansEnum plansEnum) {
+        this.id = plansEnum.getId();
+        this.name = plansEnum.getPlanName();
     }
 
     public int getId() {

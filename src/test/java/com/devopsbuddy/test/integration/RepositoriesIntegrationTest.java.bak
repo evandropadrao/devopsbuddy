@@ -105,4 +105,23 @@ public class RepositoriesIntegrationTest {
         return new Role(rolesEnum);
     }
 
+
+    private User createBasicUser() {
+
+        User user = new User();
+
+        user.setUsername("basicUser");
+        user.setPassword("secret");
+        user.setEmail("me@example.com");
+        user.setFirstName("firstName");
+        user.setLastName("lastName");
+        user.setPhoneNumber("1234567890");
+        user.setCountry("BR");
+        user.setEnabled(true);
+        user.setDescription("A basic user");
+        user.setProfileImageUrl("https://blabla.com/imageuser");
+
+        return user;
+    }
+
 }

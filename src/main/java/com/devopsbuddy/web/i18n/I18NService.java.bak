@@ -20,7 +20,7 @@ public class I18NService {
     private MessageSource messageSource;
 
     /**
-     * Returns a message for the given message id and the default locale in the session context
+     * Returns a message for the given message id and default locale in the session context
      * @param messageId The key to the messages resource file
      **/
     public String getMessage(String messageId) {
@@ -34,9 +34,9 @@ public class I18NService {
 
     /**
      * Returns a message for the given message id and locale
-     * @param messageId The key to the messages resource file
-     * @param locale The Locale
-     **/
+     * @param messageId The key to the message resource file
+     * @param locale The locale
+     */
     public String getMessage(String messageId, Locale locale) {
 
         return messageSource.getMessage(messageId, null, locale);
