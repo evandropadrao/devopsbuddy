@@ -93,8 +93,8 @@ public class PasswordResetToken implements Serializable {
         return expiryDate;
     }
 
-    public void setExpiryDate(LocalDateTime expiryToken) {
-        this.expiryDate = expiryToken;
+    public void setExpiryDate(LocalDateTime expiryDate) {
+        this.expiryDate = expiryDate;
     }
 
     @Override
@@ -108,6 +108,6 @@ public class PasswordResetToken implements Serializable {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id);
+        return (int) (id ^ (id >>> 32));
     }
 }
