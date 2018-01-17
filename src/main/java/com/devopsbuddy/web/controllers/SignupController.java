@@ -108,7 +108,6 @@ public class SignupController {
             return SUBSCRIPTION_VIEW_NAME;
         }
 
-
         // There are certain info that the user doesn't set, such as profile image URL, Stripe customer id,
         // plans and roles
         LOG.debug("Transforming user payload into User domain object");
